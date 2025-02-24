@@ -1,0 +1,102 @@
+//Variables
+@import 'global/utils/variables';
+@import 'global/utils/borders';
+@import "global/utils/spacing";
+@import "global/utils/colors";
+
+//Mixins
+@import "global/mixins/mixin";
+@import "global/mixins/grid";
+@import "global/mixins/button";
+
+//Base styles
+@import "global/base/reset";
+//@import "global/base/font";
+@import "global/content/typography";
+@import "global/content/table";
+
+//Grid
+@import "global/utils/grid-helper";
+@import "global/layout/grid";
+
+//Components
+//@import "global/components/icons";
+@import "global/components/button";
+@import "global/components/close";
+@import "global/components/links";
+@import "global/components/tabs";
+@import "global/components/accordion";
+@import "global/components/form-elements";
+
+//
+@import "pages/global-page/general";
+
+
+@import "global/slick";
+/* header */
+@import "header/header";
+
+/* footer */
+@import "footer/footer";
+
+
+
+// Pages
+// search page
+@import "pages/search/general";
+
+// search page
+@import "pages/get-started/hero";
+
+// story page
+@import "pages/story/story-card";
+@import "pages/story/featured-vas";
+
+
+// home page
+@import "pages/home/hero";
+@import "pages/home/accordion";
+@import "pages/home/introduction";
+@import "pages/home/image-text";
+@import "pages/home/pricing";
+@import "pages/home/resources";
+@import "pages/home/statistics";
+@import "pages/home/tabbed-panel";
+@import "pages/home/testimonial";
+
+// pricing page
+@import "pages/pricing/hero";
+@import "pages/pricing/intro";
+@import "pages/pricing/out-client";
+@import "pages/pricing/compacison";
+
+// pricing page
+@import "pages/our-solution/intro";
+@import "pages/our-solution/testimonial";
+@import "pages/our-solution/common-task";
+@import "pages/our-solution/core-values";
+@import "pages/our-solution/image-text";
+
+//Medical Specialties
+@import "pages/medical-specialties/accordion";
+@import "pages/medical-specialties/video-text";
+
+//Flexible
+@import "pages/flexible/hero";
+@import "pages/flexible/long-text";
+@import "pages/flexible/two-cards";
+@import "pages/flexible/large-video";
+@import "pages/flexible/quick-links";
+@import "pages/flexible/logo-bar";
+@import "pages/flexible/page-link";
+@import "pages/flexible/get-started";
+@import "pages/flexible/full-width-cta";
+@import "pages/flexible/two-col-cta";
+@import "pages/flexible/leadership-grid";
+@import "pages/flexible/playful";
+@import "pages/flexible/image-carousel";
+@import "pages/flexible/image-gallery";
+@import "pages/flexible/anchor";
+
+//resources
+@import "pages/resources/general";

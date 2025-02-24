@@ -1,0 +1,123 @@
+.page-template-pricing-page .hero-small {
+  padding-bottom: 9rem;
+  h1 {
+    margin-bottom: 0;
+  }
+}
+.page-template-get-started {
+  .hero-small {
+    padding-bottom: 10rem;
+  }
+}
+.page-template-our-solution .hero-small {
+  padding-bottom: 14rem;
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.hero-small {
+  padding: 22rem 0 15rem;
+  border-radius: 0 0 3rem 3rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+  margin-top: 0 !important;
+  background: $primary;
+  &:before {
+    content: '';
+    background: radial-gradient(109.6% 109.6% at 50% -9.6%, #113BAF 0%, #00217B 100%);
+    position: absolute;
+    inset: 0;
+  }
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .ia-container {
+    position: relative;
+    z-index: 2;
+  }
+  .content-entry {
+    max-width: 1050px;
+    &:last-child {
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.breadcrumbs {
+  color: $white;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem;
+  > img {
+    vertical-align: middle;
+    margin: 0.8rem .6rem .8rem;
+  }
+  > span {
+    vertical-align: middle;
+    > a {
+      border: 1px solid rgba($white, .25);
+      background: rgba($white, .05);
+      line-height: 1;
+      padding: 1.3rem .8rem;
+      font-size: 1.6rem;
+      color: $white;
+      display: inline-block;
+      border-radius: 1rem;
+      transition: background 0.3s, color .3s;
+      &:hover,
+      &:focus {
+        background: #fff;
+        color: $primary;
+      }
+    }
+    > span {
+      padding: .8rem 0;
+      line-height: 1;
+      font-size: 1.6rem;
+      color: $white;
+      display: inline-block;
+    }
+    &.search {
+      margin: 0 .8rem;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .breadcrumbs {
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .breadcrumbs {
+    margin-bottom: 2.5rem;
+    &>span>a {
+      font-size: 1.4rem;
+      padding: 1.4rem 0.8rem;
+    }
+  }
+  .hero-small {
+    padding-bottom: 4rem;
+    padding-top: 16rem;    
+  }
+  .page-template-get-started {
+    .hero-small {
+      padding-bottom: 6rem;
+    }
+  }
+  .page-template-our-solution .hero-small {
+    padding-bottom: 9rem;
+  }
+  .page-template-pricing-page .hero-small {
+    padding-bottom: 6rem;
+    padding-top: 16rem;
+  }
+}

@@ -1,0 +1,124 @@
+.anchor-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.anchor-item {
+  display: inline-block;
+  vertical-align: top;
+  background: rgba($white, 0.05);
+  border: 1px solid rgba($white, 0.05);
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  color: rgba($white, 0.75);
+  position: relative;
+  margin-bottom: 0;
+  transition: border 0.35s, background 0.35s, color .35s;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+.anchors-section {
+  &.module {
+    + .module {
+      margin-top: 6rem;
+    }
+  }
+}
+.desktop-version {
+  .anchor-item {
+    &:hover,
+    &:focus {
+      background: rgba($white, 0.25);
+    }
+  }
+}
+.faq-tab-nav__item.active {
+  background: rgba($white, 0.25);
+}
+.faq-tab {
+  display: none;
+}
+
+.faq-tab-nav__select {
+  display: none;
+}
+.faq-tab-nav__wrap {
+  position: relative;
+  margin-bottom: 6rem;
+}
+@media (min-width: 767px) {
+  .faq-tab-nav  {
+    display: flex !important;
+  }
+}
+@media (max-width: 767px) {
+  .faq-tab-nav__select {
+    display: block;
+    padding: 1.5rem 4rem 1.5rem 2rem;
+    background: rgba($white, 0.05);
+    border: 1px solid rgba($white, 0.05);
+    line-height: 1;
+    border-radius: 1rem;
+    position: relative;
+    &:after {
+      content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="21" height="8" viewBox="0 0 21 8" fill="none"><path d="M5.63557 1.30891C5.37781 0.980846 5.61152 0.5 6.02873 0.5L14.9713 0.5C15.3885 0.5 15.6222 0.980846 15.3644 1.30891L10.8932 6.99962C10.693 7.2544 10.307 7.2544 10.1068 6.99962L5.63557 1.30891Z" fill="white"/></svg>');
+      position: absolute;
+      top: 50%;
+      right: 2rem;
+      transform: translate(0, -50%);
+
+    }
+    &.active {
+      &:after {
+        transform: translate(0, -50%) scaleY(-1);
+      }
+    }
+    div,
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    div {
+      color: rgba($white, 0.55);
+      margin-right: 5px;
+      //width: 120px;
+    }
+    span {
+      color: $white;
+      //white-space: nowrap;
+      //max-width: calc(100% - 130px);
+      //text-overflow: ellipsis;
+      //overflow: hidden;
+      padding: 3px 0;
+    }
+  }
+  .anchor-list {
+    display: block;
+  }
+  .anchor-item {
+    padding: 1rem 1.5rem;
+    font-size: 1.4rem;
+    margin-right: 0;
+    margin-top: 1rem;
+    display: block;
+    &.faq-tab-nav__item {
+      margin-top: 0;
+      border-radius: 0;
+    }
+  }
+  .faq-tab-nav {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    z-index: 999;
+    background: $darkLight;
+    display: none;
+  }
+  .faq-tab-nav__wrap {
+    margin-bottom: 3.5rem;
+  }
+}

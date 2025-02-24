@@ -1,0 +1,54 @@
+.playful-cards {
+  padding: 5rem 4rem;
+  h2 {
+    margin-bottom: 6rem;
+  }
+  &.bg--primary {
+    transform: rotate(-5deg);
+  }
+  &.bg--white {
+    transform: rotate(5deg);
+  }
+}
+.playful-slider {
+  display: none;
+  margin-bottom: 4rem;
+  .playful-cards {
+    max-width: 280px;
+    box-sizing: border-box;
+  }
+  .slick-list {
+    overflow: visible;
+  }
+}
+.playful {
+  .slick-dots li {
+    &.slick-active {
+      button {
+        background: $white;
+      }
+    }
+    button {
+      background: $primary;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .playful{
+    .ia-row {
+      display: none;
+    }
+    .testimonial-nav__mob-nav-control {
+      display: block;
+    }
+  }
+  .playful-slider {
+    display: block;
+
+  }
+  .playful-cards {
+    padding: 5rem 3rem;
+  }
+
+}

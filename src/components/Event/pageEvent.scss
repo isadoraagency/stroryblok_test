@@ -1,0 +1,11 @@
+@import "../../assets/scss/global/utils/variables.scss";
+
+
+
+.dark {
+  background: $dark;
+}
+.light {
+  background: $light;
+  min-height: 100vh;
+}

@@ -1,0 +1,138 @@
+.bg--white .bg--white.module.module--filled {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.bg--white .hero-small +.bg--white.module.module--filled {
+  padding-bottom: 11rem;
+}
+.logo-bar {
+  &__in {
+    border-radius: 4rem;
+    padding: 6rem 7rem 13rem;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+  }
+  &__item {
+    width: 25%;
+    border-right: 1px solid rgba($primary, .25);
+    //border-top: 1px solid rgba($primary, .25);
+    position: relative;
+    box-sizing: border-box;
+    &:nth-child(4n+1):after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      height: 1px;
+      background: rgba($primary, .25);
+      width: 400%;
+      left: 0;
+    }
+    &:nth-last-child(1):after,
+    &:nth-last-child(2):after,
+    &:nth-last-child(3):after,
+    &:nth-last-child(4):after {
+      display: none;
+    }
+    //&:nth-child(1),
+    //&:nth-child(2),
+    //&:nth-child(3),
+    //&:nth-child(4){
+    //  border-top: none;
+    //}
+    &:nth-child(4n+4){
+      border-right: none;
+    }
+    span {
+      position: relative;
+      width: 100%;
+      display: block;
+      padding-bottom: 54%;
+      border: none;
+
+
+    }
+    a {
+      &:after {
+        display: none;
+      }
+    }
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(1);
+      max-height: 90%;
+      max-width: 90%;
+      width: auto;
+      height: auto;
+      transition: transform .5s;
+    }
+  }
+}
+.desktop-version {
+  .logo-bar__item {
+    a:hover,
+    a:focus {
+      img {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .logo-bar__in {
+    padding: 6rem 4rem 8rem;
+  }
+}
+@media (max-width: 1023px) {
+  .logo-bar {
+    &__list {
+      padding-top: 0;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .bg--white .hero-small+.bg--white.module.module--filled {
+    padding-bottom: 6rem;
+  }
+  .logo-bar {
+    &__in {
+      padding: 6rem 2rem;
+    }
+    &__item {
+      width: 50%;
+      border-right: 0;
+      border-top: 1px solid rgba($primary, .25);
+      &:nth-child(2n+1) {
+        border-right: 1px solid rgba($primary, .25) ;
+      }
+      &:nth-child(4n+1):after {
+        display: none;
+      }
+
+      &:nth-child(1),
+      &:nth-child(2){
+        border-top: none;
+      }
+    }
+    &__list {
+      &--odd {
+        .logo-bar__item:nth-last-child(2) {
+          position: relative;
+          &:before {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            content: '';
+            height: 1px;
+            background: rgba($primary, .25);
+          }
+        }
+      }
+    }
+  }
+}

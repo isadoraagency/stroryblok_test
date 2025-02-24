@@ -1,0 +1,84 @@
+.bg--white {
+  .introduction.bg--white {
+    padding: 0;
+  }
+  .introduction.bg--dark-200 {
+    margin: 0;
+    padding: 11rem 0;
+  }
+}
+.introduction {
+  h2 {
+    position: relative;
+    z-index: 5;
+  }
+  &__in {
+    padding: 4rem 11rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    > svg {
+      position: absolute;
+      max-height: calc(100% + 10rem);
+      top: 50%;
+      left: 10%;
+      transform: translate(0, -50%);
+    }
+    &.introduction__image-right {
+      flex-direction: row-reverse;
+    }
+  }
+  &__left {
+    width: 38%;
+  }
+  &__right {
+    width: 49%;
+    position: relative;
+    z-index: 5;
+  }
+  &__image {
+    width: 100%;
+    padding-bottom: 70%;
+    border-radius: 3rem;
+    background-size: cover;
+    position: relative;
+    z-index: 5;
+    background-position: center center;
+  }
+}
+@media (max-width: 1200px) {
+  .introduction__in > svg {
+    max-width: 400px;
+
+  }
+}
+@media (max-width: 1024px) {
+  .introduction__in {
+    padding: 3rem 0 0;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .introduction {
+    &__in {
+      padding: 0;
+      display: block;
+    }
+    &__left {
+      width: auto;
+      max-width: 350px;
+      margin: 0 0 3rem;
+    }
+    &__right {
+      width: auto;
+    }
+  }
+  .page-template-our-solution .introduction.module {
+    margin-bottom: 4rem;
+    + .module {
+      margin-top: 4rem;
+    }
+  }
+}

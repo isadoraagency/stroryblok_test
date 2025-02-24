@@ -1,0 +1,98 @@
+.accordion-module {
+  padding-top: 1px;
+}
+.accordion-content {
+  padding-right: 6rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  &--full {
+    justify-content: flex-end;
+    .accordion-content__in {
+      width: 100%;
+    }
+  }
+  &__in {
+    width: 46%
+  }
+  &__image {
+    width: 36%;
+    div {
+      border-radius: 3rem;
+      width: 100%;
+      padding-bottom: 70%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+.anchors-section .card-section__large h2, .accordion-module .card-section__large h2 {
+  max-width: 50%;
+}
+@media (max-width: 1200px) {
+
+  .accordion-title {
+    font-size: 2.4rem;
+  }
+  .anchors-section,
+  .accordion-module {
+    .card-section__large {
+      padding: 0 4rem 6rem;
+      h2 {
+        max-width: 50%;
+      }
+    }
+  }
+  .accordion-icon {
+    transform: scale(0.59);
+  }
+}
+@media (max-width: 1023px) {
+  .accordion-module {
+    padding-top: 1px;
+  }
+  .accordion-content {
+    display: block;
+    padding-right: 0;
+    &__in {
+      width: auto;
+      padding-bottom: 0;
+    }
+    &__image {
+      width: auto;
+      max-width: 170px;
+      margin-bottom: 2.6rem;
+      border-radius: 1.2rem;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .anchors-section .card-section__large, .accordion-module .card-section__large {
+    padding: 4rem 2rem;
+
+  }
+  .anchors-section .card-section__large h2, .accordion-module .card-section__large h2 {
+    max-width: 100%;
+  }
+  .accordion-module {
+    margin: 6rem 0;
+  }
+  .accordion-title {
+    font-size: 2rem;
+    max-width: calc(100% - 3.5rem);
+  }
+  .accordion-header {
+    padding: 2.5rem 0;
+  }
+  .accordion-icon {
+    width: 2.6rem;
+    height: 2.6rem;
+    margin-left: 0rem;
+    &:before,
+    &:after {
+      width: 2.6rem;
+      height: 2px;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+.quick-link {
+  &-module {
+    padding-top: 1px;
+  }
+  &__card {
+    padding: 0 5rem 8rem;
+  }
+  &__list {
+    padding-top: 1rem;
+  }
+  &__item {
+    border-top: 1px solid rgba($primary, 0.25);
+    border-bottom: none !important;
+    padding: 3rem 12rem 3rem 5rem;
+    position: relative;
+    display: block;
+    transition: all .35s;
+    &:after {
+      display: none;
+    }
+    &:first-child {
+      border-top: none;
+    }
+    &:last-child {
+      border-bottom: 1px solid rgba($primary, 0.25);
+    }
+  }
+}
+.desktop-version {
+  .quick-link__item {
+    &:hover,
+    &:focus {
+      background: $primary;
+      border-radius: 2rem;
+      border-color: transparent;
+      color: $white;
+      + .quick-link__item {
+        border-color: transparent;
+      }
+    }
+  }
+}
+.arrow-circle {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 5rem;
+  overflow: hidden;
+  border: 1px solid rgba($blue, 0.05);
+  background: $white;
+  transition: all 0.35s;
+  box-sizing: border-box;
+  &:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #ECEFFF;
+    transition: all 0.35s;
+  }
+  i {
+    color: $dark;
+    font-size: 2.3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all 0.35s;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (max-width: 1200px) {
+  .quick-link__card {
+    padding: 0 4rem 6rem;
+  }
+  .quick-link__item {
+    padding: 2rem 9rem 2rem 4rem;
+  }
+  .arrow-circle {
+    right: 4rem;
+  }
+
+}
+@media (max-width: 1023px) {
+  .quick-link {
+    &__list {
+      padding-top: 0;
+    }
+    &__card {
+      padding: 3rem 3rem 5rem;
+    }
+    &__item {
+      padding: 2.8rem 7rem 2.8rem 2.8rem;
+      .arrow-circle {
+        right: 2rem;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .quick-link {
+    &__card {
+      padding: 3rem 2rem 3.4rem;
+    }
+    &__item {
+      padding: 2.5rem 7rem 2.5rem 1rem;
+      border-bottom: 0;
+      .arrow-circle {
+        right: 0;
+      }
+    }
+  }
+}

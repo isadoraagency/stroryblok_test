@@ -1,0 +1,40 @@
+.featured-vas {
+  &__list {
+
+  }
+  &__item {
+    border-radius: 3rem;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 142%;
+    @include bg;
+    >a {
+      position: absolute;
+      inset: 0;
+      z-index: 12;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.70) 73.97%);
+    }
+    &-in {
+      position: absolute;
+      left: 4rem;
+      right: 4rem;
+      top: 48%;
+      z-index: 11;
+      .ia-btn__media:before {
+        position: absolute;
+        inset: -100vw;
+        content: '';
+      }
+    }
+  }
+  &__tags {
+    position: absolute;
+    left: 4rem;
+    bottom: 5rem;
+  }
+}

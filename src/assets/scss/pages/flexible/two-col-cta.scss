@@ -1,0 +1,34 @@
+.card-item {
+  &.card-item__cta {
+    display: block;
+    padding: 7rem 5rem;
+    .card-item__text {
+      width: auto;
+    }
+  }
+  input {
+    @include placeholder {
+      color: rgba($primary, .75);
+      opacity: 1;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .card-item.card-item__cta {
+    padding: 5rem 4rem;
+  }
+}
+@media (max-width: 1023px) {
+  .two-cards-module {
+    .card-item__wrap + .card-item__wrap {
+      margin-top: 2rem;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .card-item {
+    &.card-item__cta {
+      padding: 3rem 2rem 4rem;
+    } 
+  }
+}

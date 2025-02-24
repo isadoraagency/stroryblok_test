@@ -1,0 +1,116 @@
+.get-started {
+  .ia-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    > svg {
+      position: absolute;
+      left: 32%;
+      top: 50%;
+      transform: translate(-45%, -50%);
+    }
+  }
+  &__left {
+    width: 32%;
+    position: relative;
+    z-index: 10;
+    .card-section {
+      max-width: 310px;
+      padding-bottom: 3.5rem;
+      .card-section__images {
+        margin-bottom: 6rem;
+      }
+    }
+    .content-entry {
+      max-width: 310px;
+      margin-bottom: 9rem;
+    }
+  }
+  &__right {
+    width: 66%;
+    position: relative;
+
+
+  }
+  &__form {
+    padding: 6rem 5rem;
+    position: relative;
+    z-index: 10;
+  }
+  .card-section {
+  }
+}
+@media (max-width: 1200px) {
+  .get-started {
+    .ia-container {
+      display: block;
+      > svg {
+        max-width: 400px;
+        left: 50%;
+        top: -5rem;
+        transform: translate(0, 0);
+      }
+    }
+    &__left {
+      display: flex;
+      width: auto;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4rem;
+      &-text {
+        max-width: calc(100%  - 408px);
+        width: 500px;
+      }
+      .card-section {
+        width: 308px;
+        box-sizing: border-box;
+      }
+      .content-entry {
+        max-width: 100%;
+        margin-bottom: 0;
+      }
+    }
+    &__right {
+      width: auto;
+
+    }
+  }
+
+}
+@media (max-width: 767px) {
+  .get-started {
+    .ia-container {
+      display: block;
+    }
+    &__left {
+      width: auto;
+      margin-bottom: 3.5rem;
+      display: block;
+      .content-entry {
+        margin-bottom: 6rem;
+        max-width: 100%;
+      }
+      &-text {
+        width: auto;
+        max-width: 100%;
+      }
+      .card-section {
+        width: auto;
+        max-width: 100%;
+        .mb-2 {
+          margin-bottom: 1.5rem!important; 
+        }
+        .card-section__images {
+          margin-bottom: 2.5rem;
+        }
+      }
+    }
+    &__right {
+      width: auto;
+    }
+    &__form {
+      padding: 5rem 4rem;
+    }
+  }
+}

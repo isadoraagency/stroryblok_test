@@ -1,0 +1,32 @@
+.staff-item {
+  &__img {
+    width: 100%;
+    padding-bottom: 138%;
+    border-radius: 3rem;
+    margin-bottom: 2.5rem;
+    @include bg;
+  }
+  a {
+    border: none !important;
+    &:after {
+      display: none;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .leadership {
+    .ia-row {
+      --grid-gutter-width: 2rem;
+    }
+  }
+  .staff-item__img {
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .leadership {
+    .ia-col {
+      margin-bottom: 3rem;
+    }
+  }
+}

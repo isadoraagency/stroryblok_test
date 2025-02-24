@@ -1,0 +1,248 @@
+.comparison {
+  &__in {
+    background: $white;
+    padding: 5rem;
+  }
+}
+//col {
+//  display: table-column;
+//  position: relative;
+//  &:before {
+//    content: '';
+//    position: absolute;
+//    border-radius: 4rem;
+//    background: green;
+//    top: -5rem;
+//    left: 2rem;
+//    right: 2rem;
+//    bottom: -5rem;
+//  }
+//}
+.comparison {
+  &__table {
+    padding-top: 1px;
+  }
+  table {
+    margin: 2rem 0 10rem;
+    font-weight: 500;
+    font-size: 2rem;
+    td {
+      width: 210px;
+      &:first-child {
+        width: 32%;
+      }
+    }
+
+    td,th {
+      position: relative;
+      background: none !important;
+      text-align: center;
+      border: none !important;
+      vertical-align: middle;
+      height: 6rem;
+      padding: 1rem 0;
+      span {
+        position: absolute;
+        top: -5rem;
+        right: 1rem;
+        bottom: 0;
+        left: 1rem;
+        background: #ECEFFF;
+      }
+      div {
+        position: relative;
+        z-index: 5;
+        padding: 0 1rem;
+      }
+      &:first-child {
+        position: relative;
+        z-index: 10;
+        span {
+          height: 1px;
+          right: auto;
+          width: 310%;
+          background: #c3d1f4;
+          top: auto !important;
+          z-index: 5;
+        }
+      }
+      &:nth-child(2) {
+        color: $white;
+        span {
+          background: $darkLight;
+        }
+      }
+    }
+    th {
+      div {
+        display: inline-flex;
+        padding: 1rem;
+        width: calc(100% - 6rem);
+        box-sizing: border-box;
+        background: $white;
+        border-radius: 1rem;
+        justify-content: center;
+        min-height: 7rem;
+        flex-direction: column;
+      }
+      &:nth-child(2) {
+        div {
+          background: $primary;
+        }
+      }
+    }
+    tr {
+      background: none;
+      position: relative;
+      border: none;
+      td:first-child {
+        text-align: left;
+      }
+      &:first-child {
+        th,
+        td {
+          span {
+            top: -2rem;
+            border-radius: 2rem 2rem 0 0;
+          }
+        }
+
+      }
+      &:last-child {
+        td {
+          span {
+            bottom: -5rem;
+            border-radius: 0 0 2rem 2rem;
+          }
+          &:first-child {
+            span {
+              display: none;
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+  thead {
+    position: sticky;
+    top: 100px;
+    z-index: 20;
+    background: #fff;
+  }
+}
+i.checkmark {
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="51" viewBox="0 0 50 51" fill="none"><circle cx="25" cy="25.5" r="25" fill="%230E47D2"/><path d="M15.5938 25.7169L22.2434 33.2861C22.7786 33.8953 23.7352 33.8693 24.2366 33.2321L36.7794 17.2897" stroke="white" stroke-width="3.0075" stroke-linecap="round"/></svg>');
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+@media (max-width: 1200px) {
+  table th, table td {
+    font-size: 1.8rem;
+  }
+  i.checkmark {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+  .comparison table td span, .comparison table th span {
+    right: .5rem;
+    left: .5rem;
+  }
+  .comparison table td div, .comparison table th div {
+    padding: 0 1.5rem;
+  }
+  .comparison table th div {
+    width: calc(100% - 3rem);
+  }
+  .comparison table tr:first-child th span {
+    top: 0;
+  }
+  .comparison table tr:last-child td span {
+    bottom: -2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .comparison table tbody tr:first-child td span {
+    border-radius: 0;
+  }
+  .comparison table td:first-child span, .comparison table th:first-child span {
+    width: calc(100vw - 70px);
+  }
+  .comparison table {
+    margin: 0 0 2rem;
+  }
+  .comparison thead {
+    top: 0 !important;
+  }
+  .comparison__table {
+    overflow-x: auto;
+    margin-bottom: 3rem;
+    margin-right: -2rem;
+    table {
+      width: 800px;
+      font-size: 1.4rem;
+      tr:last-child td span {
+        bottom: 0;
+      }
+      tr:first-child {
+        th,td {
+
+            span {
+              top: 0;
+            }
+        }
+      }
+      th {
+        div {
+          min-height: 5rem;
+        }
+      }
+      th,td {
+        font-size: 1.4rem;
+        &:first-child {
+          position: sticky;
+          width: 25%;
+          left: 0;
+          background: $white !important;
+          z-index: 10;
+
+        }
+        span {
+          left: .5rem;
+          right: .5rem;
+        }
+        div {
+          padding: 0 2rem;
+        }
+      }
+    }
+  }
+  .comparison__in {
+    padding: 5rem 2rem;
+  }
+  .comparison table th {
+    padding: 0;
+    div {
+      min-height: 100%;
+      border-radius: 2rem 2rem 0 0;
+      width: calc(100% - 1rem);
+      background: #ECEFFF;
+    }
+  }
+  .comparison table tr th:first-child {
+    div {
+      display: none;
+    }
+  }
+}
+@media (max-width: 479px) {
+  .comparison__table table th:first-child, .comparison__table table td:first-child {
+    width: 155px;
+  }
+  .comparison__table table {
+    width: 700px;
+  }
+}

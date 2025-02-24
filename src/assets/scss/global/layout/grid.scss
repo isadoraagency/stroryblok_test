@@ -1,0 +1,127 @@
+@for $i from 1 through $grid-columns {
+  .ia-col-offset-#{$i} {
+    margin-left: percentage($i / $grid-columns);
+  }
+}
+@for $i from 1 through $grid-columns {
+  .ia-col-offset-#{$i} {
+    margin-left: percentage($i / $grid-columns);
+  }
+  .ia-col-#{$i} {
+    @include make-col($i);
+  }
+}
+.ia-container {
+  @include container;
+  box-sizing: border-box;
+}
+
+.ia-row {
+  @include make-grid;
+}
+.ia-col {
+  padding-left: calc(var(--grid-gutter-width) / 2);
+  padding-right: calc(var(--grid-gutter-width) / 2);
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: calc(var(--grid-gutter-width) );
+}
+// generation for def
+@for $i from 1 through $grid-columns {
+  .ia-col-#{$i} {
+    @include make-col($i);
+  }
+  .ia-col-offset-#{$i} {
+    margin-left: percentage($i / $grid-columns);
+  }
+}
+
+// generation for xs
+@for $i from 1 through $grid-columns {
+  .ia-col-xs-#{$i} {
+    @include make-col($i);
+  }
+  .ia-col-offset-xs-#{$i} {
+    margin-left: percentage($i / $grid-columns);
+  }
+}
+// generation for sm
+@include respond-to(sm) {
+  @for $i from 1 through $grid-columns {
+    .ia-col-sm-#{$i} {
+      @include make-col($i);
+    }
+    .ia-col-offset-sm-#{$i} {
+      margin-left: percentage($i / $grid-columns);
+    }
+  }
+}
+// generation for md
+@include respond-to(md) {
+  @for $i from 1 through $grid-columns {
+    .ia-col-md-#{$i} {
+      @include make-col($i);
+    }
+    .ia-col-offset-md-#{$i} {
+      margin-left: percentage($i / $grid-columns);
+    }
+  }
+}
+// generation for lg
+@include respond-to(lg) {
+  @for $i from 1 through $grid-columns {
+    .ia-col-lg-#{$i} {
+      @include make-col($i);
+    }
+    .ia-col-offset-lg-#{$i} {
+      margin-left: percentage($i / $grid-columns);
+    }
+  }
+}
+.module {
+  margin: 9rem 0;
+  &.module--filled {
+    margin: 0;
+    padding: 9rem 0;
+    &.bg--white {
+      + .module--filled {
+        &.bg--white {
+          padding-top: 0;
+        }
+      }
+    }
+
+  }
+}
+@media (max-width: 1024px) {
+  .module {
+    margin: 7rem 0;
+    &.module--filled {
+      padding: 7rem 0;
+    }
+  }
+}
+//@media (max-width: 1200px) {
+//  .module {
+//    margin: 8rem 0;
+//    &.module--filled {
+//      padding: 8rem 0;
+//    }
+//  }
+//}
+//@media (max-width: 1023px) {
+//  .module {
+//    margin: 8rem 0;
+//    &.module--filled {
+//      padding: 8rem 0;
+//    }
+//  }
+//}
+@media (max-width: 767px) {
+  .module {
+    margin: 6rem 0;
+    &.module--filled {
+      padding: 6rem 0;
+    }
+  }
+}

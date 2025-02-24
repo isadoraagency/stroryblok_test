@@ -1,0 +1,117 @@
+:root {
+  --grid-gutter-width: 30px;
+  --border-opacity: 1;
+}
+$grid-columns: 12;
+$container-max-width: 1380px;
+
+//breakpoint
+$breakpoint-xs: 480px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1200px;
+
+//font family
+$font-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+sans-serif;
+$font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+sans-serif;
+
+//spacing
+$spacing: 1rem;
+$spacing-xs: $spacing*0.5;
+$spacing-sm: $spacing*0.75;
+$spacing-md: $spacing*2;
+$spacing-lg: $spacing*3;
+$spacing-xl: $spacing*4;
+
+//buttons
+$button-padding-sm: 0.9rem 1rem;
+$button-padding-md: 1.7rem 2rem;
+$button-padding-lg: 2rem 2.8rem;
+
+$button-font-size-sm: 1.6rem;
+$button-font-size-md: 1.8rem;
+$button-font-size-lg: 2.2rem;
+
+$button-border-radius: 1rem;
+
+// border & border radius
+$border-radius: 1rem;
+$border-radius-lg: 2rem;
+$border-radius-xl: 3rem;
+$border-width: 1px;
+
+//font size
+$h1: 8rem;
+$h2: 5.2rem;
+$h3: 4rem;
+$h4: 3.8rem;
+$h5: 3.6rem;
+$h6: 3.2rem;
+$head-sizes: (
+  1: $h1,
+  2: $h2,
+  3: $h3,
+  4: $h4,
+  5: $h5,
+  6: $h6
+);
+
+$fz1: 3rem;
+$fz2: 3.8rem;
+$fz3: 3.4rem;
+$fz4: 3.23rem;
+$fz5: 2.4rem;
+$fz6: 2.2rem;
+
+$p: 2rem;
+$p2: 1.8rem;
+$p3: 1.6rem;
+$p4: 1.4rem;
+
+//colors
+$primary: #0E47D2; //blue-200
+$secondary: #001348; //blue-400
+$danger: #DB3B0F; //orange-200
+$dark: #1E202F; //stone-black-300
+$warning: #DDA755; //gold-200
+$light: #f5f5f5;
+$success: #28a745;
+$info: #ECEFFF; //blue-100
+
+//natural colors
+$white: #fff;
+$black: #000;
+
+//extra color
+$gold-100: #E4BA7C; //gold-100
+$orange-100: #F16038; // orange-100
+$orange-300: #F16038; // orange-300
+$darkLight: #292B3A; //stone-200
+$blue: #0A3294; //blue-300
+$blue-0: #ECEFFF; //blue-300
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "white":      $white
+);
+
+// SCROLLBAR WIDTH
+$sbWidth: var(--scroll-width);
+
+
+@media (max-width: 767px) {
+  :root {
+    --grid-gutter-width: 40px;
+  }
+}

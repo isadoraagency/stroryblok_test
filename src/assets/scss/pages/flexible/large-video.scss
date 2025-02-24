@@ -1,0 +1,30 @@
+.large-video {
+  .testimonial__video {
+    margin-bottom: 3rem;
+    .flex-video {
+      padding-bottom: 56%;
+    }
+    .icon-mute {
+      top: 5rem;
+      left: 5rem;
+    }
+    .ia-btn__media {
+      bottom: 5rem;
+      right: 5rem;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .large-video {
+    .testimonial__video {
+      .icon-mute {
+        top: 2rem;
+        left: 2rem;
+      }
+      .ia-btn__media {
+        bottom: 2rem;
+        right: 2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.full-width-cta {
+  padding: 7rem 5rem;
+  h2 {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .full-width-cta {
+    padding: 5rem 4rem;
+  }
+}
+@media (max-width: 767px) {
+  .full-width-cta {
+    padding: 5rem 2rem;
+  }
+}

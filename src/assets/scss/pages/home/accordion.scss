@@ -1,0 +1,273 @@
+
+.accordion-home {
+  position: relative;
+  z-index: 10;
+  padding-top: 3rem;
+  &__folder {
+    padding: 3.5rem 5rem 7rem;
+    background: $primary;
+  }
+  &__item {
+    padding: 4rem 5rem 8rem 5rem ;
+    border-radius: 3rem;
+    margin-top: -4rem;
+    position: relative;
+
+    &.active {
+      .accordion-home__item-in {
+        opacity: 1;
+
+      }
+      .h6 {
+        i {
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+    &:nth-child(3n+1) {
+      .h6 i {
+        &:before,
+        &:after {
+          background: $white;
+        }
+      }
+    }
+    .h6 {
+      padding-right: 6rem;
+      position: relative;
+      cursor: pointer;
+      &:after {
+        content: '';
+        position: absolute;
+        inset: -5rem;
+        z-index: 10;
+      }
+      i {
+        display: block;
+        width: 2.6rem;
+        height: 2.6rem;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: -1.3rem;
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 50%;
+          width: 100%;
+          background: $dark;
+          height: 2px;
+          margin-top: -1px;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 50%;
+          height: 100%;
+          background: $dark;
+          width: 2px;
+          margin-left: -1px;
+        }
+      }
+    }
+    &-badges {
+      text-align: center;
+      padding-top: 2rem;
+      a {
+        display: inline-block;
+        max-width: 150px;
+        border: none !important;
+        margin: 0 2rem;
+        &:after {
+          display: none;
+        }
+      }
+    }
+    &-in {
+
+      overflow: hidden;
+      height: 0;
+      transition: height .5s, max-height .5s;
+      //opacity: 0;
+      //transition: opacity .35s;
+    }
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      padding-top: 4rem;
+    }
+    &:last-child {
+      height: auto;
+
+    }
+    &:nth-child(3n+1) {
+      background: $blue;
+      color: $white;
+      .content-entry {
+        a {
+          color: $white;
+          border-color: $white;
+          &:hover,
+          &:focus {
+            border-color: transparent;
+          }
+        }
+      }
+    }
+    &:nth-child(3n+2) {
+      background: $warning;
+    }
+    &:nth-child(3n+3) {
+      background: $white;
+    }
+    &-left {
+      width: 46%;
+      &-in {
+        max-width: 520px;
+        .h5 {
+          i {
+            display: none;
+          }
+        }
+      }
+    }
+    &-right {
+      width: 46%;
+      &-in {
+        max-width: 420px;
+        margin: 0 6rem 0 auto;
+      }
+    }
+    &-img {
+      max-width: 100%;
+      padding-bottom: 70%;
+      border-radius: 2rem;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+}
+@media (max-width: 1024px) {
+  .accordion-home__folder {
+    padding: 3rem 4rem 7rem;
+  }
+  .accordion-home__item {
+    padding: 4rem 4rem 8rem;
+    &:last-child {
+      padding-bottom: 4rem;
+    }
+    .h6 {
+      &:after {
+        inset: -3rem;
+      }
+    }
+  }
+  .accordion-home__item-badges {
+    a {
+      max-width: 8rem;
+      margin: 0 1rem;
+    }
+  }
+  .accordion-home__item .h5 {
+    padding-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .accordion-home {
+    padding-top: 1px;
+  }
+  .accordion-home__item {
+    padding: 3rem 2rem 7rem 2rem;
+    margin-top: -5rem;
+    .h6 {
+      padding-right: 5.5rem;
+      position: relative;
+
+      i {
+        display: block;
+        width: 2.6rem;
+        height: 2.6rem;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: -1.3rem;
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 50%;
+          width: 100%;
+          background: $dark;
+          height: 2px;
+          margin-top: -1px;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 50%;
+          height: 100%;
+          background: $dark;
+          width: 2px;
+          margin-left: -1px;
+        }
+      }
+      &:after {
+        inset: -3rem -2rem;
+      }
+    }
+
+    &-inner {
+      display: block;
+    }
+    &-right {
+      margin-bottom: 2rem;
+    }
+    &-left {
+      width: auto;
+
+      &-in {
+        max-width: 100%;
+
+      }
+    }
+    &-right {
+      width: auto;
+      &-in {
+        margin-right: 0;
+        margin-left: 0;
+
+      }
+    }
+    &:last-child {
+      padding-bottom: 3rem;
+
+    }
+    &-img {
+      border-radius: 1rem;
+    }
+  }
+
+  .accordion-home__folder {
+    padding: 3.5rem 2rem 7.5rem;
+  }
+  body .image-text-module .image-text__item {
+    display: flex;
+    flex-direction: column-reverse !important;
+    .image-text__item-right,
+    .image-text__item-left {
+      width: 100%;
+    }
+    .image-text__item-left {
+      margin-top: 0;
+      margin-bottom: 4rem;
+    }
+  }
+}
