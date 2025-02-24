@@ -17,6 +17,7 @@ import SelectField from "./components/form/SelectField";
 import InputField from "./components/form/InputField";
 import Form from "./components/form/Form";
 import Hero from "./components/flexible/Hero";
+import {BrowserRouter} from "react-router-dom";
 
 storyblokInit({
   accessToken: "2OBal2fCBCeYqEVNfgWmqgtt",
@@ -45,7 +46,9 @@ storyblokInit({
 const container = document.getElementById("app");
 const root = createRoot(container);
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <BrowserRouter>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </BrowserRouter>
 );

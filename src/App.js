@@ -12,7 +12,7 @@ function App() {
     return <div>Loading...</div>;
   }
 
-  return <StoryblokComponent blok={story.content} />;
+  return <StoryblokComponent blok={story.content} full_slug={story.full_slug}/>;
 }
 
 export default App;
