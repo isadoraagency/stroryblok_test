@@ -24,15 +24,12 @@ const Hero = ({blok, index=1, full_slug}) => {
         {
           blok.image?.filename && <div className="hero-small__bg" style={{backgroundImage: `url(${blok.image.filename})`}}></div>
         }
-
+        <div className="text--white">TEST CHANGEKK</div>
         <div className={`ia-container  ${blok.hero_type != 'text' ? 'd-flex' : ''}`}>
           {blok.hero_type !== 'text' ? (
             <div className="hero-flexible__left">
               {blok.show_breadcrumbs && <Breadcrumbs fullSlug={full_slug} />}
               {blok.Title && <h1 className="text--white">{blok.Title} </h1>}
-
-
-
               {blok.description && (
                 <div
                   className="content-entry text--white"
@@ -40,7 +37,6 @@ const Hero = ({blok, index=1, full_slug}) => {
                 />
               )}
               {btnUrl && (
-
                 <Link
                   to={btnUrl}
                   target={blok.button.target ? '_blank' : '_self'}
