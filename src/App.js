@@ -7,7 +7,7 @@ function App() {
       ? "home"
       : window.location.pathname.replace("/", "");
 
-  const story = useStoryblok(slug, { version: "draft"});
+  const story = useStoryblok(slug, { version: version});
   if (!story || !story.content) {
     return <div>Loading...</div>;
   }
