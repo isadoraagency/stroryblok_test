@@ -32,12 +32,9 @@ const EventsPage = ({blok, full_slug}) => {
           {events.length ? (
             events.map((event) => <div className="ia-col-md-4 ia-col-sm-6 ia-col"><EventItem key={event.uuid} event={event.content}/></div> )
               ) : (
-
               <p>No events found.</p>
           )}
-
         </div>
-
 
         <Pagination page={page} totalPages={totalPages} setPage={setPage}/>
 
