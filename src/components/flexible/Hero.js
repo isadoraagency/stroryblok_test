@@ -16,7 +16,9 @@ const Hero = ({blok, index=1, full_slug}) => {
     btnUrl = blok.button.url;
     btnTitle = blok.button.title;
   }
-;
+
+
+
   return (
     <>
       <div className={`hero-small module hero-flexible hero-flexible--${blok.hero_type} ${blok.hero_type == 'image' && blok.image_right.filename ? '-full' : ''}`}
@@ -114,7 +116,7 @@ const Hero = ({blok, index=1, full_slug}) => {
                 )
               }
               {
-                blok.hero_type = 'video' && (
+                blok.hero_type === 'video' && (
                   <>
                     <svg width="452" height="452" viewBox="0 0 452 452" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="226.378" cy="225.622" r="224.622" transform="rotate(-180 226.378 225.622)"
@@ -165,6 +167,15 @@ const Hero = ({blok, index=1, full_slug}) => {
                       </div>
                     </div>
                   </>
+                )
+              }
+              {
+                blok.hero_type === 'form' && (
+                  <div className="hero-flexible__form">
+                    <div className="h3 text--white">{blok.form_title}</div>
+
+                    <div dangerouslySetInnerHTML={{__html: blok.form_code}}/>
+                  </div>
                 )
               }
             </div>

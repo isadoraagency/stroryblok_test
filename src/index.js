@@ -18,9 +18,11 @@ import InputField from "./components/form/InputField";
 import Form from "./components/form/Form";
 import Hero from "./components/flexible/Hero";
 import {BrowserRouter} from "react-router-dom";
+import EventsPage from "./components/EventsPage";
 
 storyblokInit({
-  accessToken: "2OBal2fCBCeYqEVNfgWmqgtt",
+  accessToken: "2OBal2fCBCeYqEVNfgWmqgtt", //DEV
+  // accessToken: "z1bSsKEUwmV8O3fXshOHAgtt", // PROD
   use: [apiPlugin],
   components: {
     CheckboxField: CheckboxField,
@@ -29,6 +31,7 @@ storyblokInit({
     InputField: InputField,
     form: Form,
     event: EventPage,
+    events: EventsPage,
     page: Page,
     hero: Hero,
     teaser: Teaser,
