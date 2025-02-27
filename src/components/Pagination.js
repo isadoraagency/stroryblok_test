@@ -31,27 +31,31 @@ const Pagination = ({ page, totalPages, setPage }) => {
     pageNumbers.push(totalPages);
   }
 
-  return totalPages > 1 &&  (
-
-    <div className="pagination">
-      <button disabled={page === 1} style={page === 1 && ({display: 'none'})} onClick={() => setPage(page - 1)}>Prev
-      </button>
-      {pageNumbers.map((num, index) =>
-        num === "..." ? (
-          <span key={index}> ... </span>
-        ) : (
-          <button
-            key={index}
-            className={num === page ? "active" : ""}
-            onClick={() => setPage(num)}
-          >
-            {num}
-          </button>
-        )
-      )}
-      <button disabled={page === totalPages} style={page === totalPages && ({display: 'none'})}
-              onClick={() => setPage(page + 1)}>Next
-      </button>
+  return ( //totalPages > 1 &&
+    <div className="page-navi-wrap">
+      <div className="pagination wp-pagenavi">
+        <button className="previouspostslink" disabled={page === 1} style={page === 1 && ({display: 'none'})}
+                onClick={() => setPage(page - 1)}><i
+          className="icon-arrow"></i>
+        </button>
+        {pageNumbers.map((num, index) =>
+          num === "..." ? (
+            <span key={index}> ... </span>
+          ) : (
+            <button c
+                    key={index}
+                    className={num === page ? "active page smaller" : "page smaller"}
+                    onClick={() => setPage(num)}
+            >
+              {num}
+            </button>
+          )
+        )}
+        <button className="nextpostslink" disabled={page === totalPages}
+                style={page === totalPages && ({display: 'none'})}
+                onClick={() => setPage(page + 1)}><i className="icon-arrow"></i>
+        </button>
+      </div>
     </div>
   );
 };

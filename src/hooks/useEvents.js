@@ -11,7 +11,7 @@ export const useEvents = (page, locationFilter) => {
       let query = `?starts_with=event/&per_page=${perPage}&page=${page}&sort_by=content.start_date:asc&version=${version}`;
 
       if (locationFilter) {
-        query += `/&filter_query[content.location][in]=${locationFilter}`;
+        query += `/&filter_query[location][in]=${locationFilter}`;
       }
 
       const response = await fetch(
