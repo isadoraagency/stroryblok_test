@@ -8,7 +8,7 @@ export const useEvents = (page, locationFilter) => {
   useEffect(() => {
     const fetchEvents = async () => {
       const perPage = 10;
-      let query = `?starts_with=event/&per_page=${perPage}&page=${page}&sort_by=content.start_date:asc&version=${version}`;
+      let query = `?starts_with=event/&per_page=${perPage}&page=${page}&sort_by=content.start_date:asc&version=${version}npm install -g storyblok`;
 
       if (locationFilter) {
         query += `/&filter_query[content.location][in]=${locationFilter}`;

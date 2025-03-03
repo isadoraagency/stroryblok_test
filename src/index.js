@@ -21,8 +21,9 @@ import {BrowserRouter} from "react-router-dom";
 import EventsPage from "./components/EventsPage";
 
 storyblokInit({
-  accessToken: "2OBal2fCBCeYqEVNfgWmqgtt", //DEV
+  // accessToken: "2OBal2fCBCeYqEVNfgWmqgtt", //DEV
   // accessToken: "z1bSsKEUwmV8O3fXshOHAgtt", // PROD
+  accessToken: process.env.REACT_APP_STORYBLOK_TOKEN,
   use: [apiPlugin],
   components: {
     CheckboxField: CheckboxField,

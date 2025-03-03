@@ -9,6 +9,7 @@ const EventItem = ({ event }) => {
       <div className="resources-item__image">
         <div className="visible"
              style={event.image.filename && ({backgroundImage: `url(${event.image.filename})`})}></div>
+
       </div>
       <h3 className="fz-5 ">{event.title}</h3>
       <div className="content-entry ">
