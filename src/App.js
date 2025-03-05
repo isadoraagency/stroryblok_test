@@ -13,9 +13,9 @@ function App() {
   }
 
   return (
-    <>
-      <SpeedInsights></SpeedInsights>
+    <
       <StoryblokComponent blok={story.content} full_slug={story.full_slug}/>
+      <SpeedInsights></SpeedInsights>
     </>
   )
 }
