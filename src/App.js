@@ -13,7 +13,7 @@ function App() {
   }
 
   return (
-    <
+    <>
       <StoryblokComponent blok={story.content} full_slug={story.full_slug}/>
       <SpeedInsights></SpeedInsights>
     </>
