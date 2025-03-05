@@ -3,6 +3,7 @@ import {renderRichText, storyblokEditable} from "@storyblok/react";
 import {Link} from "react-router-dom";
 import Breadcrumbs from "./Breadcrumbs";
 import ReactPlayer from "react-player";
+import RunEmbeddedScript from "../RunEmbeddedScript";
 
 const Hero = ({blok, index=1, full_slug}) => {
   let btnUrl = "", btnTitle= "";
@@ -16,8 +17,6 @@ const Hero = ({blok, index=1, full_slug}) => {
     btnUrl = blok.button.url;
     btnTitle = blok.button.title;
   }
-
-
 
   return (
     <>
@@ -173,8 +172,8 @@ const Hero = ({blok, index=1, full_slug}) => {
                 blok.hero_type === 'form' && (
                   <div className="hero-flexible__form">
                     <div className="h3 text--white">{blok.form_title}</div>
-
-                    <div dangerouslySetInnerHTML={{__html: blok.form_code}}/>
+                    {blok.form_code && <RunEmbeddedScript htmlCode={blok.form_code}></RunEmbeddedScript>}
+                    {/*<div ref={hubspoForm} dangerouslySetInnerHTML={{__html: blok.form_code}}/>*/}
                   </div>
                 )
               }

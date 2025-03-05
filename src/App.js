@@ -1,5 +1,5 @@
 import { useStoryblok, StoryblokComponent } from "@storyblok/react";
-
+import { SpeedInsights } from "@vercel/speed-insights/react"
 function App() {
   const version = process.env.REACT_APP_STORYBLOK_VERSION || "published";
   let slug =
@@ -12,7 +12,12 @@ function App() {
     return <div>Loading...</div>;
   }
 
-  return <StoryblokComponent blok={story.content} full_slug={story.full_slug}/>;
+  return (
+    <>
+      <SpeedInsights></SpeedInsights>
+      <StoryblokComponent blok={story.content} full_slug={story.full_slug}/>
+    </>
+  )
 }
 
 export default App;
